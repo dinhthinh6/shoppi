@@ -3,7 +3,6 @@ import { WrapperHeader,WrapperTextHeader,WrapperAccountHeader,WrapperTextHeaderS
 import { Col } from 'antd'
 import {
   UserOutlined,
-  CaretDownOutlined,
   ShoppingCartOutlined,
   HomeOutlined
 } from '@ant-design/icons';
@@ -12,21 +11,21 @@ import ButttonInputSearch from '../ButtonInputSearch/ButtonInputSearch';
 const HeaderComponent = () => {
   return (
     <div>
-      <WrapperHeader gutter={25}>
-        <Col span={2}>
+      <WrapperHeader>
+        <Col span={3}>
           <WrapperTextHeader>Rex-T Store</WrapperTextHeader>
         </Col>
-        <Col span={16}>
+        <Col span={15}>
           <ButttonInputSearch
               size="large"
-              bordered={false}
-              textbutton="Tìm kiếm"
               placeholder="input search text"
+              textButton="Tìm kiếm"
+              backgroundColorButton="#fff"
               // onChange={onSearch}
-              backgroundColorButton="#5a20c1"
+              colorText="rgb(10, 104, 255)"
             />
         </Col>
-        <Col span={6} style={{display:'flex', gap:'20px'}}>
+        <Col span={6} style={{display:'flex', gap:'20px', paddingLeft:'20px'}}>
           <WrapperAccountHeader>
             <HomeOutlined style={{fontSize:'25px', color:'#fff'}}/>
             <WrapperTextHeaderSmall>Trang Chu</WrapperTextHeaderSmall>
